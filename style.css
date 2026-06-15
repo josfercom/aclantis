@@ -1,0 +1,683 @@
+/* =========================================================
+   VARIABLES DE COLORES Y ESTILOS
+   ========================================================= */
+:root {
+    /* Colores principales */
+    --color-primario: #2563eb;
+    /* Azul para botones y enlaces */
+    --color-secundario: #1e293b;
+    /* Azul oscuro para titulos */
+    --color-fondo: #ffffff;
+    /* Fondo principal blanco */
+    --color-fondo-gris: #f8fafc;
+    /* Fondo gris claro para secciones */
+    --color-borde: #e2e8f0;
+    /* Gris para bordes y lineas */
+
+    /* Colores de texto */
+    --color-texto-oscuro: #1e293b;
+    /* Texto principal */
+    --color-texto-suave: #64748b;
+    /* Texto secundario o explicativo */
+    --color-blanco: #ffffff;
+    /* Texto para botones */
+}
+
+/* =========================================================
+   RESET GENERAL DE ESTILOS
+   ========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto-oscuro);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+/* =========================================================
+   HEADER Y MENU DE NAVEGACION (USANDO FLEXBOX)
+   ========================================================= */
+.cabecera {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid var(--color-borde);
+    padding: 15px 0;
+}
+
+.cabecera-contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    /* Flexbox para alinear logo y menu en los extremos */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 60px;
+    /* Altura del logo en la cabecera */
+    width: auto;
+    max-width: 180px;
+    display: block;
+    object-fit: contain;
+}
+
+
+/* Menu */
+.menu-lista {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.menu-enlace {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-texto-suave);
+}
+
+.menu-enlace:hover {
+    color: var(--color-primario);
+}
+
+/* Boton de contacto en el menu */
+.menu-boton {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.menu-boton:hover {
+    background-color: #1d4ed8;
+}
+
+/* =========================================================
+   BOTONES GENERALES
+   ========================================================= */
+.boton {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.boton-principal {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+}
+
+.boton-principal:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.boton-secundario {
+    background-color: var(--color-fondo-gris);
+    color: var(--color-texto-oscuro);
+    border: 1px solid var(--color-borde);
+}
+
+.boton-secundario:hover {
+    background-color: #f1f5f9;
+    transform: translateY(-1px);
+}
+
+/* =========================================================
+   SECCIONES Y TITULOS
+   ========================================================= */
+section {
+    padding: 80px 0;
+}
+
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.cabecera-seccion {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.tag-seccion {
+    font-size: 0.8rem;
+    color: var(--color-primario);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.titulo-seccion {
+    font-size: 2rem;
+    color: var(--color-secundario);
+    font-weight: 700;
+}
+
+/* =========================================================
+   SECCION 1: INICIO (HERO) - CON FLEXBOX
+   ========================================================= */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-fondo-gris);
+    padding-top: 120px;
+}
+
+.hero-contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    /* Flexbox para dividir en dos columnas */
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-contenido {
+    flex: 1;
+}
+
+.hero-titulo {
+    font-size: 2.8rem;
+    color: var(--color-secundario);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-titulo span {
+    color: var(--color-primario);
+}
+
+.hero-descripcion {
+    font-size: 1.05rem;
+    color: var(--color-texto-suave);
+    margin-bottom: 30px;
+}
+
+.hero-botones {
+    display: flex;
+    gap: 15px;
+}
+
+/* Columna de simulacion visual */
+.hero-imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.tarjeta-simulacion {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.simulacion-cabecera {
+    background-color: var(--color-fondo-gris);
+    padding: 12px;
+    border-bottom: 1px solid var(--color-borde);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.simulacion-puntos {
+    display: flex;
+    gap: 5px;
+}
+
+.punto {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--color-borde);
+}
+
+.simulacion-titulo {
+    font-size: 0.75rem;
+    color: var(--color-texto-suave);
+    font-weight: bold;
+}
+
+.simulacion-cuerpo {
+    height: 250px;
+    background-color: #f1f5f9;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.simulacion-pin {
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.simulacion-caja-info {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: 6px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.simulacion-caja-info h4 {
+    font-size: 0.85rem;
+    color: var(--color-secundario);
+}
+
+.simulacion-estrellas {
+    font-size: 0.75rem;
+    color: #f59e0b;
+    margin: 2px 0;
+}
+
+.simulacion-estado {
+    font-size: 0.7rem;
+    color: #16a34a;
+    font-weight: 600;
+}
+
+/* =========================================================
+   SECCION 2: NOSOTROS
+   ========================================================= */
+.nosotros {
+    background-color: var(--color-fondo);
+}
+
+.nosotros-contenido {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.nosotros-texto {
+    flex: 1.2;
+}
+
+.nosotros-texto p {
+    margin-bottom: 20px;
+    color: var(--color-texto-suave);
+    font-size: 1rem;
+}
+
+.nosotros-estadisticas {
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.caja-estadistica {
+    background-color: var(--color-fondo-gris);
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+}
+
+.estadistica-numero {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-primario);
+    margin-bottom: 5px;
+}
+
+.estadistica-label {
+    font-size: 0.9rem;
+    color: var(--color-texto-suave);
+}
+
+/* =========================================================
+   SECCION 3: SERVICIOS (USANDO FLEXBOX)
+   ========================================================= */
+.servicios {
+    background-color: var(--color-fondo-gris);
+}
+
+.servicios-tarjetas {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tarjeta-servicio {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    padding: 30px;
+    width: calc(33.33% - 14px);
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta-servicio h3 {
+    font-size: 1.2rem;
+    color: var(--color-secundario);
+    margin: 15px 0 10px 0;
+}
+
+.tarjeta-servicio p {
+    color: var(--color-texto-suave);
+    font-size: 0.9rem;
+    flex-grow: 1;
+}
+
+/* Iconos sencillos */
+.icono-servicio {
+    width: 45px;
+    height: 45px;
+    background-color: rgba(37, 99, 235, 0.1);
+    color: var(--color-primario);
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+/* =========================================================
+   SECCION 4: BENEFICIOS
+   ========================================================= */
+.beneficios {
+    background-color: var(--color-fondo);
+}
+
+.beneficios-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.item-beneficio {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    background-color: var(--color-fondo-gris);
+}
+
+.numero-beneficio {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primario);
+}
+
+.texto-beneficio h3 {
+    font-size: 1.1rem;
+    color: var(--color-secundario);
+    margin-bottom: 5px;
+}
+
+.texto-beneficio p {
+    color: var(--color-texto-suave);
+    font-size: 0.9rem;
+}
+
+/* =========================================================
+   SECCION 5: CONTACTO (FLEXBOX)
+   ========================================================= */
+.contacto {
+    background-color: var(--color-fondo-gris);
+}
+
+.contacto-contenedor {
+    display: flex;
+    gap: 40px;
+    align-items: stretch;
+}
+
+.contacto-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contacto-descripcion {
+    font-size: 1rem;
+    color: var(--color-texto-suave);
+    margin-bottom: 25px;
+}
+
+.lista-datos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.dato-item {
+    font-size: 0.95rem;
+}
+
+.dato-item strong {
+    color: var(--color-secundario);
+}
+
+/* Formulario */
+.contacto-formulario {
+    flex: 1;
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+.formulario-grupo {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.formulario-grupo label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-texto-oscuro);
+}
+
+.formulario-grupo input,
+.formulario-grupo textarea {
+    padding: 10px;
+    border: 1px solid var(--color-borde);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.formulario-grupo input:focus,
+.formulario-grupo textarea:focus {
+    outline: none;
+    border-color: var(--color-primario);
+}
+
+.formulario-boton {
+    width: 100%;
+    border: none;
+    margin-top: 10px;
+}
+
+/* =========================================================
+   PIE DE PÁGINA (FOOTER)
+   ========================================================= */
+.pie-pagina {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    padding: 50px 0 20px 0;
+}
+
+.pie-contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.pie-info {
+    flex: 1.5;
+    min-width: 250px;
+}
+
+.pie-info p {
+    margin-top: 10px;
+    color: var(--color-borde);
+    font-size: 0.9rem;
+}
+
+.pie-links {
+    flex: 1;
+    min-width: 150px;
+}
+
+.pie-links h4 {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.pie-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.pie-links a {
+    color: var(--color-borde);
+    font-size: 0.9rem;
+}
+
+.pie-links a:hover {
+    color: var(--color-blanco);
+}
+
+.pie-derechos {
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.8rem;
+    color: var(--color-borde);
+}
+
+.nota-curso {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+/* =========================================================
+   RESPONSIVIDAD Y MEDIA QUERIES (FLEXBOX ADAPTATIVO)
+   ========================================================= */
+@media (max-width: 900px) {
+    .hero-contenedor {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-titulo {
+        font-size: 2.2rem;
+    }
+
+    .hero-botones {
+        justify-content: center;
+    }
+
+    .nosotros-contenido {
+        flex-direction: column;
+    }
+
+    .contacto-contenedor {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        padding: 50px 0;
+    }
+
+    .cabecera-contenedor {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu-lista {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tarjeta-servicio {
+        width: 100%;
+    }
+
+    .pie-contenedor {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .pie-derechos {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
