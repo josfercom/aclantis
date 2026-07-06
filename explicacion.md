@@ -1,6 +1,6 @@
-# Explicación de mi Proyecto - PA3
+# Explicación de mi Proyecto - PA4
 
-En este documento explico cómo he construido el sitio web de **Aclantis Group** para la Evaluación Continua 3, detallando de qué trata la página y cómo apliqué cada uno de los temas que hemos aprendido en clase.
+En este documento explico cómo he construido el sitio web de **Aclantis Group** para la Evaluación Continua 4, agregando nuevas páginas y ampliando el contenido del proyecto inicial de PA3.
 
 ---
 
@@ -45,3 +45,37 @@ Para la hoja de estilos, apliqué los temas avanzados y básicos de CSS aprendid
 ## 5. Diseño Adaptivo y Git (Requerimiento 4 y 5)
 * **Adaptación a Celulares**: Al final de mi archivo CSS configuré reglas para que en pantallas de celulares o tablets los elementos se apilen de forma vertical (`flex-direction: column`) y se adapten sin crear barras de desplazamiento incómodas hacia los lados.
 * **Subida a GitHub**: Inicialicé el repositorio en mi consola (`git init`), añadí todos los archivos (`git add .`), realicé el commit obligatorio con el mensaje `"Primer commit examen"` y lo subí a la rama `main` de mi cuenta de GitHub para completar la entrega.
+
+---
+
+## 6. PA4: Nuevas Páginas (nosotros.html y servicios.html)
+Para la segunda etapa del proyecto, agregué dos páginas nuevas que tienen contenido más detallado:
+
+### Página: Nosotros (nosotros.html)
+En esta página agregué:
+* **Seccion Hero**: Una introduccion sobre el equipo de Aclantis Group con un titulo llamativo.
+* **Mision y Vision**: Tres tarjetas que muestran la mision, vision y valores de la empresa. Las tarjetas tienen un efecto hover que las eleva un poco.
+* **Por qué elegirnos**: Una lista con 4 razones principales. Cada razon tiene un borde azul en la izquierda para que se vea mas interesante.
+* **Datos de la empresa**: Una grilla con 4 estadisticas (negocios posicionados, años, clientes satisfechos, soporte).
+
+### Página: Servicios (servicios.html)
+En esta página mostré todos los servicios que ofrece Aclantis:
+* **Servicios principales**: Las 3 tarjetas de servicios pero ahora con mas detalles y precio aproximado en cada una.
+* **Servicios adicionales**: Una lista numerada con 4 servicios extra (auditoria gratuita, gestion mensual, fotos, campañas).
+* **Planes de precios**: Una comparativa con 3 planes diferentes (Basico, Profesional, Premium). El plan Profesional está destacado porque es el mas popular.
+
+### Estilos CSS utilizados
+Para estas dos páginas no creé CSS nuevo inecesario. Solo agregué las clases que faltaban:
+* `.tarjeta-valor` - Para las tarjetas de mision y vision
+* `.razon-item` - Para los items de razones con borde azul
+* `.estadisticas-grid` - Grid de 4 columnas para las estadisticas
+* `.servicio-fila` - Para los servicios adicionales en fila
+* `.planes-comparativa` - Grid de 3 columnas para los planes
+
+Todas estas clases reutilizan las variables de color y estilos base que ya tenia en el archivo CSS principal.
+
+### Estructura y Links
+* El header y footer son identicos en todas las paginas para mantener consistencia.
+* Los links del navbar ahora apuntan a las nuevas paginas: `nosotros.html` y `servicios.html`.
+* Desde cualquier pagina se puede volver al inicio con el logo.
+* Todo sigue siendo responsive con media queries adaptadas para celular.
