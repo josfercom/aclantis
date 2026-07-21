@@ -4,221 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aclantis Group - Posicionamiento en Google Maps</title>
-    <!-- Vinculo con las fuentes de Google Fonts -->
+    <!-- Fuentes de Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Enlace al archivo CSS de estilos -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Icono de la pagina (Favicon) -->
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Icono de la pagina -->
     <link rel="shortcut icon" href="media/icon.ico" type="image/x-icon">
 </head>
 <body>
 
     <!-- Encabezado con menu de navegacion -->
-    <header class="cabecera" id="header">
-        <div class="cabecera-contenedor">
-            <a href="index.html" class="logo">
+    <header class="cabecera sticky-top bg-white shadow-sm" id="header">
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <a href="index.html" class="logo text-decoration-none">
                 <img src="media/logo.png" alt="Aclantis Group" class="logo-img">
             </a>
             
-            <nav class="navbar" id="navbar">
-                <ul class="menu-lista">
-                    <li><a href="index.html" class="menu-enlace">Inicio</a></li>
-                    <li><a href="nosotros.html" class="menu-enlace">Nosotros</a></li>
-                    <li><a href="servicios.html" class="menu-enlace">Servicios</a></li>
-                    <li><a href="index.html#beneficios" class="menu-enlace">Beneficios</a></li>
-                    <li><a href="index.html#contacto" class="menu-enlace menu-boton">Contacto</a></li>
-                </ul>
+            <nav class="navbar navbar-expand-lg navbar-light p-0" id="navbar">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto menu-lista d-flex align-items-center gap-3 m-0 p-0 list-unstyled">
+                        <li class="nav-item"><a href="index.html" class="nav-link fw-semibold active">Inicio</a></li>
+                        <li class="nav-item"><a href="pages/nosotros.html" class="nav-link fw-semibold">Nosotros</a></li>
+                        <li class="nav-item"><a href="pages/servicios.html" class="nav-link fw-semibold">Servicios</a></li>
+                        <li class="nav-item"><a href="pages/beneficios.html" class="nav-link fw-semibold">Beneficios</a></li>
+                        <li class="nav-item"><a href="pages/contacto.html" class="btn btn-primary px-4 py-2 rounded-pill fw-semibold shadow-sm">Contacto</a></li>
+                    </ul>
+                </div>
             </nav>
         </div>
     </header>
 
-    <!-- Contenido principal de la pagina -->
+    <!-- Contenido principal -->
     <main>
         
         <!-- Seccion 1: Inicio (Hero) -->
-        <section class="hero" id="inicio">
-            <div class="hero-contenedor">
-                <div class="hero-contenido">
-                    <span class="tag-seccion">SEO Local y Google Maps</span>
-                    <h1 class="hero-titulo">Haz que tu negocio destaque en <span>Google Maps</span></h1>
-                    <p class="hero-descripcion">
-                        En Aclantis Group ayudamos a pequeños negocios locales a posicionarse en los primeros resultados de busqueda en su zona geografica. Haz que tus clientes te encuentren al instante.
-                    </p>
-                    <div class="hero-botones">
-                        <a href="#contacto" class="boton boton-principal">Solicitar Informacion</a>
-                        <a href="#servicios" class="boton boton-secundario">Ver Servicios</a>
-                    </div>
-                </div>
-                
-                <div class="hero-imagen">
-                    <!-- Simulacion de mapa interactivo -->
-                    <div class="tarjeta-simulacion">
-                        <div class="simulacion-cabecera">
-                            <div class="simulacion-puntos">
-                                <span class="punto"></span>
-                                <span class="punto"></span>
-                                <span class="punto"></span>
-                            </div>
-                            <span class="simulacion-titulo">Simulador Google Maps</span>
-                        </div>
-                        <div class="simulacion-cuerpo">
-                            <div class="simulacion-pin">📍</div>
-                            <div class="simulacion-caja-info">
-                                <h4>Aclantis Client</h4>
-                                <div class="simulacion-estrellas">★★★★★ (5.0)</div>
-                                <p class="simulacion-estado">Abierto • Posicion #1</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seccion 2: Nosotros -->
-        <section class="nosotros" id="nosotros">
-            <div class="contenedor">
-                <div class="cabecera-seccion">
-                    <span class="tag-seccion">Sobre Nosotros</span>
-                    <h2 class="titulo-seccion">Expertos en crecimiento local</h2>
-                </div>
-                <div class="nosotros-contenido">
-                    <div class="nosotros-text">
-                        <p>
-                            Somos una agencia dedicada a ayudar a las pymes y negocios locales a tener presencia en internet. Hoy en dia, la mayoria de las personas buscan negocios cercanos desde sus celulares usando Google Maps.
+        <section class="hero py-5" id="inicio">
+            <div class="container">
+                <div class="row align-items-center min-vh-75">
+                    <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
+                        <span class="badge bg-primary-subtle text-primary mb-3 px-3 py-2 rounded-pill">SEO Local y Google Maps</span>
+                        <h1 class="display-4 fw-bold mb-4">Haz que tu negocio destaque en <span class="text-primary">Google Maps</span></h1>
+                        <p class="lead text-muted mb-4">
+                            En Aclantis Group ayudamos a pequeños negocios locales a posicionarse en los primeros resultados de busqueda en su zona geografica. Haz que tus clientes te encuentren al instante.
                         </p>
-                        <p>
-                            Nuestro trabajo consiste en optimizar tu ficha de Google Business Profile, mejorar la cantidad y calidad de tus reseñas y asegurar que tu negocio aparezca cuando un cliente local busque lo que ofreces.
-                        </p>
-                    </div>
-                    
-                    <div class="nosotros-estadisticas">
-                        <div class="caja-estadistica">
-                            <h3 class="estadistica-numero">+150%</h3>
-                            <p class="estadistica-label">Mas llamadas locales</p>
-                        </div>
-                        <div class="caja-estadistica">
-                            <h3 class="estadistica-numero">Top 3</h3>
-                            <p class="estadistica-label">Posicionamiento en tu zona</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seccion 3: Servicios -->
-        <section class="servicios" id="servicios">
-            <div class="contenedor">
-                <div class="cabecera-seccion">
-                    <span class="tag-seccion">Servicios</span>
-                    <h2 class="titulo-seccion">Lo que hacemos por tu negocio</h2>
-                </div>
-                
-                <div class="servicios-tarjetas">
-                    <!-- Tarjeta 1 -->
-                    <div class="tarjeta-servicio">
-                        <div class="icono-servicio">📌</div>
-                        <h3>Optimizacion del Perfil</h3>
-                        <p>Completamos tu ficha de Google, configuramos palabras clave adecuadas y optimizamos tus imagenes con etiquetas de ubicacion.</p>
-                    </div>
-
-                    <!-- Tarjeta 2 -->
-                    <div class="tarjeta-servicio">
-                        <div class="icono-servicio">⭐</div>
-                        <h3>Gestion de Reseñas</h3>
-                        <p>Creamos estrategias y codigos QR personalizados para que tus clientes califiquen tu servicio con 5 estrellas facilmente.</p>
-                    </div>
-
-                    <!-- Tarjeta 3 -->
-                    <div class="tarjeta-servicio">
-                        <div class="icono-servicio">📈</div>
-                        <h3>Analisis SEO Local</h3>
-                        <p>Analizamos las tecnicas de tu competencia mas cercana y mejoramos tus datos locales para superarlos en el ranking.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seccion 4: Beneficios -->
-        <section class="beneficios" id="beneficios">
-            <div class="contenedor">
-                <div class="cabecera-seccion">
-                    <span class="tag-seccion">Beneficios</span>
-                    <h2 class="titulo-seccion">¿Por que posicionar tu negocio?</h2>
-                </div>
-                
-                <div class="beneficios-lista">
-                    <!-- Beneficio 1 -->
-                    <div class="item-beneficio">
-                        <span class="numero-beneficio">01</span>
-                        <div class="texto-beneficio">
-                            <h3>Mas llamadas y visitas</h3>
-                            <p>Los clientes te encontraran en su mapa y podran llamarte o ir a tu local directamente con un solo clic.</p>
-                        </div>
-                    </div>
-
-                    <!-- Beneficio 2 -->
-                    <div class="item-beneficio">
-                        <span class="numero-beneficio">02</span>
-                        <div class="texto-beneficio">
-                            <h3>Generacion de confianza</h3>
-                            <p>Tener un perfil de Google completo y activo con buenas calificaciones hace que la gente elija tu negocio antes que otros.</p>
-                        </div>
-                    </div>
-
-                    <!-- Beneficio 3 -->
-                    <div class="item-beneficio">
-                        <span class="numero-beneficio">03</span>
-                        <div class="texto-beneficio">
-                            <h3>Ahorro en publicidad</h3>
-                            <p>Aparecer en el mapa de forma organica te permite recibir visitas diarias sin tener que pagar por anuncios costosos.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seccion 5: Contacto -->
-        <section class="contacto" id="contacto">
-            <div class="contenedor">
-                <div class="cabecera-seccion">
-                    <span class="tag-seccion">Contacto</span>
-                    <h2 class="titulo-seccion">Contactate con nosotros</h2>
-                </div>
-                
-                <div class="contacto-contenedor">
-                    <div class="contacto-info">
-                        <p class="contacto-descripcion">
-                            Completa el formulario y te enviaremos un reporte preliminar sobre la visibilidad de tu negocio de forma gratuita.
-                        </p>
-                        <div class="lista-datos">
-                            <div class="dato-item"><strong>Direccion:</strong> Av. Arequipa 4567, Miraflores, Lima</div>
-                            <div class="dato-item"><strong>Email:</strong> 45612149@mail.isil.pe</div>
-                            <div class="dato-item"><strong>Telefono:</strong> +51 918 647 921</div>
+                        <div class="d-flex gap-3">
+                            <a href="pages/contacto.html" class="btn btn-primary btn-lg px-4 rounded-pill shadow-sm"><i class="fa-solid fa-paper-plane me-2"></i>Solicitar Info</a>
+                            <a href="pages/servicios.html" class="btn btn-outline-primary btn-lg px-4 rounded-pill"><i class="fa-solid fa-eye me-2"></i>Ver Servicios</a>
                         </div>
                     </div>
                     
-                    <div class="contacto-formulario">
-                        <form onsubmit="event.preventDefault(); window.open('https://api.whatsapp.com/send?phone=51918647921&text=Hola,%20mi%20nombre%20es%20' + document.getElementById('nombre').value + '%20del%20negocio%20' + document.getElementById('negocio').value + '.%20Me%20interesa%20la%20auditoría%20gratis.%20Mensaje:%20' + document.getElementById('mensaje').value, '_blank');">
-                            <div class="formulario-grupo">
-                                <label for="nombre">Nombre Completo</label>
-                                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+                    <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                        <!-- Simulador de mapa super profesional -->
+                        <div class="card border-0 shadow-lg rounded-4 overflow-hidden position-relative">
+                            
+                            <!-- Barra superior del simulador (estilo navegador) -->
+                            <div class="bg-white px-3 py-2 border-bottom d-flex align-items-center position-relative z-2">
+                                <div class="d-flex gap-2">
+                                    <span class="rounded-circle bg-danger mac-btn"></span>
+                                    <span class="rounded-circle bg-warning mac-btn"></span>
+                                    <span class="rounded-circle bg-success mac-btn"></span>
+                                </div>
+                                <div class="mx-auto bg-light rounded-pill px-4 py-1 text-muted small fw-medium fs-xs">
+                                    <i class="fa-solid fa-lock me-1 text-success"></i> google.com/maps
+                                </div>
                             </div>
-                            <div class="formulario-grupo">
-                                <label for="email">Correo Electronico</label>
-                                <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
+                            
+                            <!-- Area del mapa con imagen de fondo -->
+                            <div class="map-bg flex-grow-1 position-relative z-1 simulador-mapa-altura">
+                                <div class="map-overlay"></div>
+                                
+                                <!-- Pin y tarjeta de informacion -->
+                                <div class="position-absolute top-50 start-50 translate-middle d-flex flex-column align-items-center mt-3">
+                                    <!-- Tarjeta popup -->
+                                    <div class="card border-0 shadow-lg rounded-3 p-3 mb-2 text-center popup-mapa">
+                                        <h4 class="h6 fw-bold mb-1 text-dark">Aclantis Client</h4>
+                                        <div class="text-warning small mb-1">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                            <span class="text-dark ms-1 fw-bold">5.0</span> <span class="text-muted">(128)</span>
+                                        </div>
+                                        <p class="small text-success mb-0 fw-bold"><i class="fa-solid fa-clock me-1"></i> Abierto ahora</p>
+                                    </div>
+                                    <!-- Pin flotante -->
+                                    <div class="text-danger bounce-animation pin-mapa">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="formulario-grupo">
-                                <label for="negocio">Nombre del Negocio</label>
-                                <input type="text" id="negocio" name="negocio" placeholder="Ej. Panaderia Don Lucho" required>
-                            </div>
-                            <div class="formulario-grupo">
-                                <label for="mensaje">Mensaje</label>
-                                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe aqui tu mensaje..."></textarea>
-                            </div>
-                            <button type="submit" class="boton boton-principal formulario-boton">Enviar Formulario</button>
-                        </form>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
@@ -227,30 +113,44 @@
     </main>
 
     <!-- Pie de pagina -->
-    <footer class="pie-pagina">
-        <div class="pie-contenedor">
-            <div class="pie-info">
-                <h3>Aclantis Group</h3>
-                <p>Especialistas en posicionamiento local y SEO en Google Maps para pymes.</p>
-            </div>
-            
-            <div class="pie-links">
-                <h4>Enlaces del sitio</h4>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="index.html#beneficios">Beneficios</a></li>
-                    <li><a href="index.html#contacto">Contacto</a></li>
-                </ul>
-            </div>
-            
-            <div class="pie-derechos">
-                <p>&copy; 2026 Aclantis Group. Todos los derechos reservados.</p>
-                <span class="nota-curso">Evaluacion Continua PA3 - Diseño y Desarrollo Web</span>
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4" data-aos="fade-up">
+                    <h3 class="h5 fw-bold mb-3">Aclantis Group</h3>
+                    <p class="text-white-50">Especialistas en posicionamiento local y SEO en Google Maps para pymes.</p>
+                </div>
+                
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <h4 class="h6 fw-bold mb-3 text-uppercase">Enlaces del sitio</h4>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="index.html" class="text-white-50 text-decoration-none hover-white">Inicio</a></li>
+                        <li><a href="pages/nosotros.html" class="text-white-50 text-decoration-none hover-white">Nosotros</a></li>
+                        <li><a href="pages/servicios.html" class="text-white-50 text-decoration-none hover-white">Servicios</a></li>
+                        <li><a href="pages/beneficios.html" class="text-white-50 text-decoration-none hover-white">Beneficios</a></li>
+                        <li><a href="pages/contacto.html" class="text-white-50 text-decoration-none hover-white">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <p class="text-white-50 mb-1">&copy; 2026 Aclantis Group. Todos los derechos reservados.</p>
+                    <span class="badge bg-primary">Evaluacion Integral - Diseño y Desarrollo Web</span>
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicializar AOS
+        AOS.init({
+            once: true,
+            offset: 50
+        });
+    </script>
 </body>
 </html>
+

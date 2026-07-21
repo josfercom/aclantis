@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Aclantis Group</title>
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Icono de la pagina -->
+    <link rel="shortcut icon" href="../media/icon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Encabezado con menu de navegacion -->
+    <header class="cabecera sticky-top bg-white shadow-sm" id="header">
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <a href="../index.html" class="logo text-decoration-none">
+                <img src="../media/logo.png" alt="Aclantis Group" class="logo-img">
+            </a>
+            
+            <nav class="navbar navbar-expand-lg navbar-light p-0" id="navbar">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto menu-lista d-flex align-items-center gap-3 m-0 p-0 list-unstyled">
+                        <li class="nav-item"><a href="../index.html" class="nav-link fw-semibold">Inicio</a></li>
+                        <li class="nav-item"><a href="nosotros.html" class="nav-link fw-semibold">Nosotros</a></li>
+                        <li class="nav-item"><a href="servicios.html" class="nav-link fw-semibold">Servicios</a></li>
+                        <li class="nav-item"><a href="beneficios.html" class="nav-link fw-semibold">Beneficios</a></li>
+                        <li class="nav-item"><a href="contacto.html" class="btn btn-primary px-4 py-2 rounded-pill fw-semibold shadow-sm">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        
+        <!-- Seccion Contacto -->
+        <section class="py-5 bg-light min-vh-100 d-flex align-items-center">
+            <div class="container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <span class="text-primary fw-bold text-uppercase small tracking-wider">Hablemos</span>
+                    <h1 class="display-5 fw-bold mb-4">Contactate con <span class="text-primary">Nosotros</span></h1>
+                    <p class="lead text-muted mx-auto max-w-600">
+                        Completa el formulario y te enviaremos un reporte preliminar sobre la visibilidad de tu negocio de forma gratuita.
+                    </p>
+                </div>
+
+                <div class="row g-5 align-items-stretch">
+                    
+                    <!-- Informacion de contacto -->
+                    <div class="col-lg-5" data-aos="fade-right">
+                        <div class="card border-0 shadow-sm rounded-4 h-100 bg-primary text-white">
+                            <div class="card-body p-5 d-flex flex-column justify-content-center">
+                                <h3 class="h4 fw-bold mb-4">Informacion de Contacto</h3>
+                                
+                                <div class="d-flex mb-4">
+                                    <div class="fs-4 me-3"><i class="fa-solid fa-location-dot"></i></div>
+                                    <div>
+                                        <h4 class="h6 fw-bold mb-1">Direccion</h4>
+                                        <p class="text-white-50 mb-0">Av. Arequipa 4567, Miraflores, Lima</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex mb-4">
+                                    <div class="fs-4 me-3"><i class="fa-solid fa-envelope"></i></div>
+                                    <div>
+                                        <h4 class="h6 fw-bold mb-1">Email</h4>
+                                        <p class="text-white-50 mb-0">45612149@mail.isil.pe</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex">
+                                    <div class="fs-4 me-3"><i class="fa-solid fa-phone"></i></div>
+                                    <div>
+                                        <h4 class="h6 fw-bold mb-1">Telefono</h4>
+                                        <p class="text-white-50 mb-0">+51 918 647 921</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulario de contacto -->
+                    <div class="col-lg-7" data-aos="fade-left">
+                        <div class="card border-0 shadow-sm rounded-4 h-100 p-4 p-md-5">
+                            <form onsubmit="event.preventDefault(); window.open('https://api.whatsapp.com/send?phone=51918647921&text=Hola,%20mi%20nombre%20es%20' + document.getElementById('nombre').value + '%20del%20negocio%20' + document.getElementById('negocio').value + '.%20Me%20interesa%20la%20auditoría%20gratis.%20Mensaje:%20' + document.getElementById('mensaje').value, '_blank');">
+                                
+                                <div class="row g-3">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="nombre" class="form-label fw-semibold text-muted">Nombre Completo</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-light border-end-0"><i class="fa-solid fa-user text-muted"></i></span>
+                                            <input type="text" class="form-control bg-light border-start-0" id="nombre" placeholder="Ingresa tu nombre" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email" class="form-label fw-semibold text-muted">Correo Electronico</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-light border-end-0"><i class="fa-solid fa-at text-muted"></i></span>
+                                            <input type="email" class="form-control bg-light border-start-0" id="email" placeholder="Ingresa tu correo" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="negocio" class="form-label fw-semibold text-muted">Nombre del Negocio</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light border-end-0"><i class="fa-solid fa-shop text-muted"></i></span>
+                                        <input type="text" class="form-control bg-light border-start-0" id="negocio" placeholder="Ej. Panaderia Don Lucho" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label for="mensaje" class="form-label fw-semibold text-muted">Mensaje</label>
+                                    <textarea class="form-control bg-light" id="mensaje" rows="4" placeholder="Escribe aqui tu mensaje..." required></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-lg w-100 rounded-pill shadow-sm fw-bold">
+                                    <i class="fa-brands fa-whatsapp me-2"></i> Enviar a WhatsApp
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4" data-aos="fade-up">
+                    <h3 class="h5 fw-bold mb-3">Aclantis Group</h3>
+                    <p class="text-white-50">Especialistas en posicionamiento local y SEO en Google Maps para pymes.</p>
+                </div>
+                
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <h4 class="h6 fw-bold mb-3 text-uppercase">Enlaces del sitio</h4>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="../index.html" class="text-white-50 text-decoration-none hover-white">Inicio</a></li>
+                        <li><a href="nosotros.html" class="text-white-50 text-decoration-none hover-white">Nosotros</a></li>
+                        <li><a href="servicios.html" class="text-white-50 text-decoration-none hover-white">Servicios</a></li>
+                        <li><a href="beneficios.html" class="text-white-50 text-decoration-none hover-white">Beneficios</a></li>
+                        <li><a href="contacto.html" class="text-white-50 text-decoration-none hover-white">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <p class="text-white-50 mb-1">&copy; 2026 Aclantis Group. Todos los derechos reservados.</p>
+                    <span class="badge bg-primary">Evaluacion Integral - Diseño y Desarrollo Web</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicializar AOS
+        AOS.init({
+            once: true,
+            offset: 50
+        });
+    </script>
+</body>
+</html>
+

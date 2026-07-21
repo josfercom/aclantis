@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Aclantis Group</title>
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Icono de la pagina -->
+    <link rel="shortcut icon" href="../media/icon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Encabezado con menu de navegacion -->
+    <header class="cabecera sticky-top bg-white shadow-sm" id="header">
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <a href="../index.html" class="logo text-decoration-none">
+                <img src="../media/logo.png" alt="Aclantis Group" class="logo-img">
+            </a>
+            
+            <nav class="navbar navbar-expand-lg navbar-light p-0" id="navbar">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto menu-lista d-flex align-items-center gap-3 m-0 p-0 list-unstyled">
+                        <li class="nav-item"><a href="../index.html" class="nav-link fw-semibold">Inicio</a></li>
+                        <li class="nav-item"><a href="nosotros.html" class="nav-link fw-semibold">Nosotros</a></li>
+                        <li class="nav-item"><a href="servicios.html" class="nav-link fw-semibold active">Servicios</a></li>
+                        <li class="nav-item"><a href="beneficios.html" class="nav-link fw-semibold">Beneficios</a></li>
+                        <li class="nav-item"><a href="contacto.html" class="btn btn-primary px-4 py-2 rounded-pill fw-semibold shadow-sm">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        
+        <!-- Seccion Hero de servicios -->
+        <section class="hero bg-light py-5" id="servicios-hero">
+            <div class="container py-5 text-center" data-aos="fade-down" data-aos-duration="1000">
+                <span class="badge bg-primary-subtle text-primary mb-3 px-3 py-2 rounded-pill">Nuestros Servicios</span>
+                <h1 class="display-5 fw-bold mb-4">Soluciones completas para <span class="text-primary">tu negocio local</span></h1>
+                <p class="lead text-muted mx-auto max-w-700">
+                    Ofrecemos diferentes planes y servicios diseñados para potenciar tu presencia en Google Maps. Desde optimizacion basica hasta auditorias completas.
+                </p>
+            </div>
+        </section>
+
+        <!-- Seccion Servicios principales -->
+        <section class="py-5">
+            <div class="container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <span class="text-primary fw-bold text-uppercase small tracking-wider">Nuestros Servicios</span>
+                    <h2 class="fw-bold mb-4">Lo que ofrecemos</h2>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Servicio 1 -->
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card h-100 border-0 shadow-sm rounded-4 hover-lift overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top card-img-servicio" alt="Optimizacion SEO">
+                            <div class="card-body p-4">
+                                <div class="text-primary fs-1 mb-3"><i class="fa-solid fa-map-pin"></i></div>
+                                <h3 class="h5 fw-bold mb-3">Optimizacion del Perfil</h3>
+                                <p class="text-muted mb-4">
+                                    Completamos tu ficha de Google Business Profile con toda la informacion importante: horarios, fotos, descripcion, telefonos, enlaces. Tambien agregamos las palabras clave correctas para que aparezca cuando tus clientes busquen en Google Maps.
+                                </p>
+                                <span class="badge bg-primary rounded-pill px-3 py-2">Desde S/ 500</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 2 -->
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card h-100 border-0 shadow-sm rounded-4 hover-lift overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top card-img-servicio" alt="Gestion de Reseñas">
+                            <div class="card-body p-4">
+                                <div class="text-primary fs-1 mb-3"><i class="fa-solid fa-star"></i></div>
+                                <h3 class="h5 fw-bold mb-3">Gestion de Reseñas</h3>
+                                <p class="text-muted mb-4">
+                                    Nos encargamos de conseguir mas reseñas de 5 estrellas de tus clientes reales. Creamos estrategias para que dejen comentarios positivos, generamos codigos QR y enviamos mensajes automaticos pidiendo que te califiquen.
+                                </p>
+                                <span class="badge bg-primary rounded-pill px-3 py-2">Desde S/ 800</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 3 -->
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card h-100 border-0 shadow-sm rounded-4 hover-lift overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top card-img-servicio" alt="Analisis SEO">
+                            <div class="card-body p-4">
+                                <div class="text-primary fs-1 mb-3"><i class="fa-solid fa-chart-line"></i></div>
+                                <h3 class="h5 fw-bold mb-3">Analisis SEO Local</h3>
+                                <p class="text-muted mb-4">
+                                    Hacemos un analisis profundo de como se ve tu negocio en Google y lo comparamos con tus competidores mas cercanos. Te damos un reporte con las acciones que debes tomar para superar a otros negocios similares en tu zona.
+                                </p>
+                                <span class="badge bg-primary rounded-pill px-3 py-2">Desde S/ 300</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seccion planes y paquetes -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <span class="text-primary fw-bold text-uppercase small tracking-wider">Planes</span>
+                    <h2 class="fw-bold mb-4">Elige el plan que mejor se adapte</h2>
+                </div>
+
+                <div class="row g-4 align-items-center">
+                    <!-- Plan Basico -->
+                    <div class="col-lg-4" data-aos="fade-right">
+                        <div class="card border-0 shadow-sm rounded-4 p-4 text-center">
+                            <h3 class="h5 fw-bold mb-3">Plan Basico</h3>
+                            <p class="display-6 fw-bold text-primary mb-4">S/ 500<span class="fs-6 text-muted fw-normal">/mes</span></p>
+                            <ul class="list-unstyled text-start mb-4 ps-3">
+                                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Optimizacion del perfil</li>
+                                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Respuesta a reseñas</li>
+                                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Actualizacion de fotos</li>
+                                <li class="text-muted"><i class="fa-solid fa-xmark text-danger me-2"></i> Campañas personalizadas</li>
+                            </ul>
+                            <button class="btn btn-outline-primary rounded-pill py-2 w-100">Mas info</button>
+                        </div>
+                    </div>
+
+                    <!-- Plan Profesional -->
+                    <div class="col-lg-4" data-aos="fade-up">
+                        <div class="card border-primary shadow rounded-4 p-4 text-center position-relative">
+                            <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-primary px-3 py-2">Mas Popular</span>
+                            <h3 class="h5 fw-bold mb-3 mt-3">Plan Profesional</h3>
+                            <p class="display-6 fw-bold text-primary mb-4">S/ 1200<span class="fs-6 text-muted fw-normal">/mes</span></p>
+                            <ul class="list-unstyled text-start mb-4 ps-3">
+                                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Todo del plan Basico</li>
+                                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Gestion de reseñas activa</li>
+                                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Analisis mensual SEO</li>
+                                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Campañas personalizadas</li>
+                            </ul>
+                            <button class="btn btn-primary rounded-pill py-2 w-100 shadow-sm">Contratar Ahora</button>
+                        </div>
+                    </div>
+
+                    <!-- Plan Premium -->
+                    <div class="col-lg-4" data-aos="fade-left">
+                        <div class="card border-0 shadow-sm rounded-4 p-4 text-center">
+                            <h3 class="h5 fw-bold mb-3">Plan Premium</h3>
+                            <p class="display-6 fw-bold text-primary mb-4">S/ 2000<span class="fs-6 text-muted fw-normal">/mes</span></p>
+                            <ul class="list-unstyled text-start mb-4 ps-3">
+                                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Todo del plan Profesional</li>
+                                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Fotos profesionales</li>
+                                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Soporte prioritario 24/7</li>
+                                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Coaching personalizado</li>
+                            </ul>
+                            <button class="btn btn-outline-primary rounded-pill py-2 w-100">Mas info</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4" data-aos="fade-up">
+                    <h3 class="h5 fw-bold mb-3">Aclantis Group</h3>
+                    <p class="text-white-50">Especialistas en posicionamiento local y SEO en Google Maps para pymes.</p>
+                </div>
+                
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <h4 class="h6 fw-bold mb-3 text-uppercase">Enlaces del sitio</h4>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="../index.html" class="text-white-50 text-decoration-none hover-white">Inicio</a></li>
+                        <li><a href="nosotros.html" class="text-white-50 text-decoration-none hover-white">Nosotros</a></li>
+                        <li><a href="servicios.html" class="text-white-50 text-decoration-none hover-white">Servicios</a></li>
+                        <li><a href="beneficios.html" class="text-white-50 text-decoration-none hover-white">Beneficios</a></li>
+                        <li><a href="contacto.html" class="text-white-50 text-decoration-none hover-white">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <p class="text-white-50 mb-1">&copy; 2026 Aclantis Group. Todos los derechos reservados.</p>
+                    <span class="badge bg-primary">Evaluacion Integral - Diseño y Desarrollo Web</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicializar AOS
+        AOS.init({
+            once: true,
+            offset: 50
+        });
+    </script>
+</body>
+</html>
+
